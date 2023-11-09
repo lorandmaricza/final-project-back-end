@@ -1,0 +1,40 @@
+repo_name: lorandmaricza/final-project-back-end
+report_id: a7ea890ff5d41079c9f8a679c3b6cdce
+repo_type: Public
+timestamp: '2023-11-09T13:24:33+00:00'
+requested_by: lorandmaricza
+provider: github
+branch: master
+detected_tools_count: 3
+tools:
+- name: PHP
+  description: A popular general-purpose scripting language that is especially suited
+    to web development
+  website_url: http://www.php.net/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: Heroku
+  description: Build, deliver, monitor and scale web apps and APIs with a trail blazing
+    developer experience.
+  website_url: https://www.heroku.com
+  open_source: false
+  hosted_saas: true
+  category: Application Hosting
+  sub_category: Platform as a Service
+  image_url: https://img.stackshare.io/service/133/3wgIDj3j.png
+  detection_source: Procfile
+  last_updated_by: Lorand Maricza
+  last_updated_on: 2023-11-08 12:51:32.000000000 Z
