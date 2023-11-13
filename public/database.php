@@ -2,12 +2,16 @@
 session_start();
 error_reporting(E_ALL);
 
+$DATABASE_HOST = '127.0.0.1';
+$DATABASE_USER = 'root';
+$DATABASE_PASS = 'root';
+$DATABASE_NAME = 'project_db';
+
 $conn = mysqli_connect(
-    getenv("DATABASE_HOST"),
-    getenv("DATABASE_USER"),
-    getenv("DATABASE_PASS"),
-    getenv("DATABASE_NAME"),
-    getenv("DATABASE_PORT")
+    $DATABASE_HOST,
+    $DATABASE_USER,
+    $DATABASE_PASS,
+    $DATABASE_NAME
 );
 
 if (!$conn) {
