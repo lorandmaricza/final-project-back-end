@@ -1,5 +1,4 @@
 <?php
-
 include '../database.php';
 include '../cors.php';
 global $conn;
@@ -12,7 +11,7 @@ if (
     !isset($data['categories']) ||
     !isset($data['lat']) ||
     !isset($data['lng'])) {
-    die('{"ok": false}');
+    die('{"status":"error", "message":"Missing input data"}');
 }
 
 $distance = $data['distance'];
@@ -44,7 +43,7 @@ $sql = "SELECT s.id,
 $result = $conn->query($sql);
 
 if ($result === false) {
-    die('{"ok": false}');
+    die('{"status":"error", "message":"Failed database operation"}');
 }
 
 while ($row = $result->fetch_assoc()) {

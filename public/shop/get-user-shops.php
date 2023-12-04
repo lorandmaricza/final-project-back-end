@@ -5,6 +5,10 @@ global $conn;
 
 $data = json_decode(file_get_contents('php://input'), true);
 
+if ($data === null || !isset($data['userId'])) {
+    die('{"status":"error", "message":"Missing input data"}');
+}
+
 $user_id = $data['userId'];
 
 $sql = "SELECT *, ST_X(location) as lat, ST_Y(location) as lng FROM shops WHERE user_id = ?";

@@ -4,6 +4,11 @@ include '../cors.php';
 global $conn;
 
 $data = json_decode(file_get_contents('php://input'), true);
+
+if ($data === null || !isset($data['categoryName'])) {
+    die('{"status":"error", "message":"Missing input data"}');
+}
+
 $category_name = $data['categoryName'];
 
 $check_sql = "SELECT * FROM categories WHERE name = ?";

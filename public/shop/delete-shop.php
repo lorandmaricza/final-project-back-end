@@ -4,6 +4,11 @@ include '../cors.php';
 global $conn;
 
 $data = json_decode(file_get_contents('php://input'), true);
+
+if ($data === null || !isset($data['shopId'])) {
+    die('{"status":"error", "message":"Missing input data"}');
+}
+
 $shop_id = $data['shopId'];
 
 $sql = "DELETE FROM shops WHERE id = ?";

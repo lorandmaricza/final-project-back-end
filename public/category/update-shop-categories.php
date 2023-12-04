@@ -20,5 +20,4 @@ foreach ($checkedCategories as $categoryId) {
     $stmt->execute();
 }
 
-$response = array(['status' => 'success', 'message' => 'Shop categories successfully updated.']);
-echo json_encode($response);
+echo json_encode(['status' => 'success', 'message' => 'Shop categories successfully updated.']);

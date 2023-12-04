@@ -4,6 +4,11 @@ include '../cors.php';
 global $conn;
 
 $data = json_decode(file_get_contents('php://input'), true);
+
+if ($data == null || !isset($data['email']) || !isset($data['password'])) {
+    die('{"status":"error", "message":"Missing input data"}');
+}
+
 $email = $data['email'];
 $password = $data['password'];
 
