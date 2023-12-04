@@ -4,6 +4,16 @@ include '../cors.php';
 global $conn;
 
 $data = json_decode(file_get_contents('php://input'), true);
+
+if (
+    $data === null ||
+    !isset($data['lat']) ||
+    !isset($data['lng']) ||
+    !isset($data['address']) ||
+    !isset($data['userId'])) {
+    die('{"status":"error", "message":"Missing input data"}');
+}
+
 $lat = $data['lat'];
 $lng = $data['lng'];
 $address = $data['address'];

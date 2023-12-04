@@ -1,6 +1,6 @@
 <?php
-include 'database.php';
-include 'cors.php';
+include '../database.php';
+include '../cors.php';
 
 session_unset();
 session_destroy();

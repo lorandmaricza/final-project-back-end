@@ -1,18 +1,29 @@
 <?php
-include 'database.php';
-include 'cors.php';
+include '../database.php';
+include '../cors.php';
 global $conn;
 
 $data = json_decode(file_get_contents('php://input'), true);
 
+if (
+    $data === null ||
+    !isset($data['id']) ||
+    !isset($data['firstName']) ||
+    !isset($data['lastName']) ||
+    !isset($data['email']) ||
+    !isset($data['previousPassword']) ||
+    !isset($data['password']) ||
+    !isset($data['confirmPassword'])) {
+    die('{"status":"error", "message":"Missing input data"}');
+}
+
 $id = $data['id'];
-$first_name = $data['first_name'];
-$last_name = $data['last_name'];
+$first_name = $data['firstName'];
+$last_name = $data['lastName'];
 $email = $data['email'];
-// is it ok?
-$previous_password = $data['previous_password'];
+$previous_password = $data['previousPassword'];
 $password = $data['password'];
-$confirm_password = $data['confirm_password'];
+$confirm_password = $data['confirmPassword'];
 
 $query = 'UPDATE users SET first_name = ?, last_name = ?, email = ?';
 $query_password = ', password = ?';
