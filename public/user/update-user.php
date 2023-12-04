@@ -1,6 +1,6 @@
 <?php
-include 'database.php';
-include 'cors.php';
+include '../database.php';
+include '../cors.php';
 global $conn;
 
 $data = json_decode(file_get_contents('php://input'), true);
