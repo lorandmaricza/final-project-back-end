@@ -1,0 +1,51 @@
+repo_name: lorandmaricza/final-project-back-end
+report_id: 872808a3fc36df0672a1db80901de943
+repo_type: Public
+timestamp: '2023-12-14T09:27:07+00:00'
+requested_by: lorandmaricza
+provider: github
+branch: master
+detected_tools_count: 4
+tools:
+- name: PHP
+  description: A popular general-purpose scripting language that is especially suited
+    to web development
+  website_url: http://www.php.net/
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/991/hwUcGZ41_400x400.jpg
+  detection_source: Repo Metadata
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source: Repo Metadata
+- name: Heroku
+  description: Build, deliver, monitor and scale web apps and APIs with a trail blazing
+    developer experience.
+  website_url: https://www.heroku.com
+  open_source: false
+  hosted_saas: true
+  category: Application Hosting
+  sub_category: Platform as a Service
+  image_url: https://img.stackshare.io/service/133/3wgIDj3j.png
+  detection_source: Procfile
+  last_updated_by: Lorand Maricza
+  last_updated_on: 2023-11-10 15:11:31.000000000 Z
+- name: heroku/heroku-buildpack-php
+  description: Toolkit for starting a PHP application locally
+  package_url: https://packagist.org/heroku/heroku-buildpack-php
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/packagist/image.png
+  detection_source: composer.json
+  last_updated_by: Lorand Maricza
+  last_updated_on: 2023-11-10 10:41:22.000000000 Z
